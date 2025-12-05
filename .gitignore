@@ -1,0 +1,13 @@
+# Server Configuration
+PORT=3000
+# WEBHOOK_VERIFY_TOKEN: Arbitrary string you set here and in Meta dashboard
+WEBHOOK_VERIFY_TOKEN=MYVERIFICATIONTOKENACCESSTOCONFIGURATIONWEBHOOKFORZOHOWEBHOOKS217712
+
+# WhatsApp Cloud API Configuration
+# Found in Meta App Dashboard > WhatsApp > API Setup
+WA_PHONE_NUMBER_ID=910245248828380
+CLOUD_API_ACCESS_TOKEN=EAAQNBEXzcAIBQMy8QohMN4eOBZAyZBrB5VVOtPYyZBmiqZADstI8MNBJY66rBuarYnbrgSZBPg8jZBnFdVEZBIm9H1hIDXvqD4GqgiwLvTH8l0ZCK2lGZBD0FBg9PTZBwyqdE2ZBZAV4aWIwsEgGOR5kLx3f1L0ZBbSEfbKBuqLzaVI6DeNNhycS4ld7xrzx19DHmm1cNJwZDZD
+CLOUD_API_VERSION=v21.0
+
+# Zoho Configuration (Optional if you want to secure incoming webhooks)
+# You can add a secret header check in the code if needed

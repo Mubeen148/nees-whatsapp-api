@@ -1,0 +1,20 @@
+{
+  "name": "whatsapp-zoho-integration",
+  "version": "1.0.0",
+  "description": "WhatsApp Cloud API integration with Zoho Books",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "docx": "^9.5.1",
+    "dotenv": "^16.3.0",
+    "express": "^4.18.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
