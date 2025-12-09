@@ -135,7 +135,7 @@ export const sendVideoMessage = async (to, link, caption = '') => {
  * @param {string} languageCode - e.g. 'en_US'
  * @param {Array} components - Template components (header, body parameters etc.)
  */
-export const sendTemplateMessage = async (to, templateName, languageCode = 'en_US', components = []) => {
+export const sendTemplateMessage = async (to, templateName, languageCode = 'en', components = []) => {
   try {
     const response = await apiClient.post('/messages', {
       messaging_product: 'whatsapp',

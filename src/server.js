@@ -55,6 +55,18 @@ app.post('/webhook', async (req, res) => {
     try {
         const body = req.body;
 
+        // DEBUG: Log the full webhook payload to catch 'statuses' (delivery updates/errors)
+        // This is crucial for debugging why an 'accepted' message isn't delivered.
+        if (body.entry && body.entry[0].changes && body.entry[0].changes[0].value.statuses) {
+            const status = body.entry[0].changes[0].value.statuses[0];
+            console.log(`\n--- [Message Status Update] ---`);
+            console.log(`Status: ${status.status}`);
+            if (status.errors) {
+                console.error('Errors:', JSON.stringify(status.errors, null, 2));
+            }
+            console.log('-------------------------------\n');
+        }
+
         // Check if this is an event from a WhatsApp subscription
         if (body.object) {
             if (
